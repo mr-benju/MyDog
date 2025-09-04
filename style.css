@@ -1,0 +1,20 @@
+.margen{
+margin-top: 90%;
+margin-left: 50px;
+
+text-align: center;
+}
+.form-control {
+    width: 150px ;
+    min-width: 0 ;
+    display: block;
+    text-align: center;
+}
+.email{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.password{
+    margin-left: 30%;
+    margin-right: 30%;
+}
