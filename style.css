@@ -18,3 +18,22 @@ text-align: center;
     margin-left: 30%;
     margin-right: 30%;
 }
+/**
+ALGUNOS EFECTOS OPCIONALES
+**/
+
+.hover-zoom{
+    transition: transform 0.3s ease,
+    filter 0.4s ease;
+    border-radius:
+}
+.hover-zoom:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+.foto_beagle{
+    margin-top:20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
