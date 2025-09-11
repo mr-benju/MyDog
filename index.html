@@ -1,134 +1,405 @@
 <!DOCTYPE html>
+
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!-- el css siempre va al final porque el boostrap puede tener otras configuraciones que inhiban al css -->
-        
-    </head>
-
-    <body>
-    
-        <div class="galeria">
-            <figure>
-                <img class="hover-zoom" src="img/beagle.png" alt="Beagle" width="200" height="200">
-                <figcaption>Beagle</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/border_collie.png" alt="Border Collie" width="200" height="200">
-                <figcaption>Border Collie</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/san_bernardo.png" alt="San Bernardo" width="200" height="200">
-                <figcaption>San Bernardo</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/weimaraner.png" alt="Weimaraner" width="200" height="200">
-                <figcaption>Weimaraner</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/jack_rusell.png" alt="Jack Rusell" width="200" height="200">
-                <figcaption>Jack Rusell</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/boxer.png" alt="Boxer" width="200" height="200">
-                <figcaption>Boxer</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/chow_chow.png" alt="Chow Chow" width="200" height="200">
-                <figcaption>Chow Chow</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/american_pitbull_terrier.png" alt="American Pitbull Terrier" width="200" height="200">
-                <figcaption>American Pitbull Terrier</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/dalmata.png" alt="Dálmata" width="200" height="200">
-                <figcaption>Dálmata</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/doberman.png" alt="Doberman" width="200" height="200">
-                <figcaption>Doberman</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/dogo_argentino.png" alt="Dogo Argentino" width="200" height="200">
-                <figcaption>Dogo Argentino</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/salchicha.png" alt="Salchicha" width="200" height="200">
-                <figcaption>Salchicha</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/poodle.png" alt="Poodle" width="200" height="200">
-                <figcaption>Poodle</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/shiba_inu.png" alt="Shiba Inu" width="200" height="200">
-                <figcaption>Shiba Inu</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/boyero_berna.png" alt="Boyero de Berna" width="200" height="200">
-                <figcaption>Boyero de Berna</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/cane_corso.png" alt="Cane Corso" width="200" height="200">
-                <figcaption>Cane Corso</figcaption>
-            </figure>
-
-            <figure>
-                <img class="hover-zoom" src="img/terra_nova.png" alt="Terra Nova" width="200" height="200">
-                <figcaption>Terra Nova</figcaption>
-            </figure>
-            
-            <figure>
-                <img class="hover-zoom" src="img/labrador.png" alt="Labrador" width="200" height="200">
-                <figcaption>Labrador</figcaption>
-            </figure>
-        </div>
 
 
+  <head>
 
+    <meta charset="UTF-8">
 
+    <!-- Latest compiled and minified CSS -->
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- el css siempre va al final porque el boostrap puede tener otras configuraciones que inhiban al css -->
 
     
-        <form class="margen">
-        <div class="email">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email">
-        </div>
-        <div class="password">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-        </div>
-        <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+
+    <!-- Google Fonts para título bonito -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+
+      .titulo-fondo {
+
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        color: white;
+
+        text-align: center;
+
+        padding: 40px;
+
+        margin: 0 0 30px 0;
+
+        font-family: 'Fredoka One', cursive;
+
+        font-size: 3rem;
+
+        border-radius: 15px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+        position: relative;
+
+        overflow: hidden;
+
+      }
+
+      
+
+      .titulo-fondo::before {
+
+        content: '';
+
+        position: absolute;
+
+        top: -50%;
+
+        left: -50%;
+
+        width: 200%;
+
+        height: 200%;
+
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" opacity="0.1">🐕🐾🦴</text></svg>') repeat;
+
+        animation: float 20s linear infinite;
+
+        pointer-events: none;
+
+      }
+
+      
+
+      .subtitulo-fondo {
+
+        font-size: 1rem; 
+
+        margin-top: 10px; 
+
+        opacity: 0.9;
+
+        font-family: 'Comic Neue', sans-serif;
+
+        font-weight: normal;
+
+      }
+
+      
+
+      @keyframes float {
+
+        0% { transform: translateX(-100px) translateY(-100px); }
+
+        100% { transform: translateX(100px) translateY(100px); }
+
+      }
+
+    </style>
+
+  </head>
 
 
 
+  <body>
 
-    </body>
+  
+
+    <!-- Título principal con fondo degradado -->
+
+    <div class="titulo-fondo">
+
+      🐕 MY DOG 🐾
+
+      <div class="subtitulo-fondo">
+
+        Tu galería de razas caninas favoritas
+
+      </div>
+
+    </div>
+
+  
+
+    <div class="galeria">
+
+      <!-- ...existing code... -->
+
+      <figure>
+
+        <img class="hover-zoom" src="img/beagle.png" alt="Beagle" width="200" height="200" data-target="#pastorAleman">
+
+        <figcaption>Beagle</figcaption>
+
+         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#pastorAleman">Ver más</button>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/border_collie.png" alt="Border Collie" width="200" height="200">
+
+        <figcaption>Border Collie</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/san_bernardo.png" alt="San Bernardo" width="200" height="200">
+
+        <figcaption>San Bernardo</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/weimaraner.png" alt="Weimaraner" width="200" height="200">
+
+        <figcaption>Weimaraner</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/jack_rusell.png" alt="Jack Rusell" width="200" height="200">
+
+        <figcaption>Jack Rusell</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/boxer.png" alt="Boxer" width="200" height="200">
+
+        <figcaption>Boxer</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/chow_chow.png" alt="Chow Chow" width="200" height="200">
+
+        <figcaption>Chow Chow</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/american_pitbull_terrier.png" alt="American Pitbull Terrier" width="200" height="200">
+
+        <figcaption>American Pitbull Terrier</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/dalmata.png" alt="Dálmata" width="200" height="200">
+
+        <figcaption>Dálmata</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/doberman.png" alt="Doberman" width="200" height="200">
+
+        <figcaption>Doberman</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/dogo_argentino.png" alt="Dogo Argentino" width="200" height="200">
+
+        <figcaption>Dogo Argentino</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/salchicha.png" alt="Salchicha" width="200" height="200">
+
+        <figcaption>Salchicha</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/poodle.png" alt="Poodle" width="200" height="200">
+
+        <figcaption>Poodle</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/shiba_inu.png" alt="Shiba Inu" width="200" height="200">
+
+        <figcaption>Shiba Inu</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/boyero_berna.png" alt="Boyero de Berna" width="200" height="200">
+
+        <figcaption>Boyero de Berna</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/cane_corso.png" alt="Cane Corso" width="200" height="200">
+
+        <figcaption>Cane Corso</figcaption>
+
+      </figure>
+
+
+
+      <figure>
+
+        <img class="hover-zoom" src="img/terra_nova.png" alt="Terra Nova" width="200" height="200">
+
+        <figcaption>Terra Nova</figcaption>
+
+      </figure>
+
+      
+
+      <figure>
+
+        <img class="hover-zoom" src="img/labrador.png" alt="Labrador" width="200" height="200">
+
+        <figcaption>Labrador</figcaption>
+
+      </figure>
+
+    </div>
+
+
+
 
 
 </html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <title>Bootstrap Example</title>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+ <h2>Modal Example</h2>
+
+ <!-- Trigger the modal with a button -->
+
+ 
+
+
+
+ <!-- Modal -->
+
+ <div class="modal fade" id="pastorAleman" role="dialog">
+
+  <div class="modal-dialog">
+
+  
+
+   <!-- Modal content-->
+
+   <div class="modal-content">
+
+    <div class="modal-header">
+
+     <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+     <h4 class="modal-title">Modal Header</h4>
+
+    </div>
+
+    <div class="modal-body">
+
+     <p>Este es un perrito pastor aleman, edad: 4 años, raza amigable, etc</p>
+
+    </div>
+
+    <div class="modal-footer">
+
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    </div>
+
+   </div>
+
+   
+
+  </div>
+
+ </div>
+
+ 
+
+</div>
