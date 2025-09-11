@@ -1,39 +1,47 @@
-.margen{
-margin-top: 90%;
-margin-left: 50px;
+body {
+    background-color: black!important;
 
-text-align: center;
 }
+
+.margen {
+    margin-top: 90%;
+    margin-left: 50px;
+    text-align: center;
+}
+
 .form-control {
-    width: 150px ;
-    min-width: 0 ;
+    width: 150px;
+    min-width: 0;
     display: block;
     text-align: center;
 }
-.email{
-    margin-left: 30%;
-    margin-right: 30%;
-}
-.password{
-    margin-left: 30%;
-    margin-right: 30%;
-}
-/**
-ALGUNOS EFECTOS OPCIONALES
-**/
 
-.hover-zoom{
-    transition: transform 0.3s ease,
-    filter 0.4s ease;
-    border-radius:
+.email {
+    margin-left: 30%;
+    margin-right: 30%;
 }
-.hover-zoom:hover{
+
+.password {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/* ==========
+   EFECTOS OPCIONALES
+   ========== */
+.hover-zoom {
+    transition: transform 0.3s ease, filter 0.4s ease;
+    border-radius: 10px; /* antes estaba vacío y causaba error */
+}
+
+.hover-zoom:hover {
     transform: scale(1.2);
     filter: brightness(1.2);
 }
-.foto_beagle{
-    margin-top:20px;
+
+.foto_perro {
+    margin-top: 20px;
     display: flex;
     justify-content: center; /* Centra horizontalmente */
-    align-items: center;
+    align-items: center;     /* Centra verticalmente */
 }
