@@ -1,14 +1,67 @@
 body {
-    background-color: rgba(255, 255, 255, 0.863)!important;
+    background-color: #FAF9F6!important;
 
 }
+
+
+/* ==========
+    TITULO
+   ==========*/
+.titulo-fondo {
+    background: linear-gradient(135deg, #D9B55F 0%, #D97C5F 100%);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin: 0 0 30px 0;
+    font-family: 'Fredoka One', cursive;
+    font-size: 5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+} 
+
+.titulo-fondo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" opacity="0.1">🦴🐾🦴</text></svg>') repeat;
+    animation: float 20s linear infinite;
+    pointer-events: none;
+}
+
+.subtitulo-fondo {
+    font-size: 3rem; 
+    margin-top: 10px; 
+    opacity: 0.9;
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: normal;
+}
+
+@keyframes float {
+    0% { transform: translateX(-100px) translateY(-100px); }
+    100% { transform: translateX(100px) translateY(100px); }
+}
+
+.descripcion {
+    text-align: justify;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: 17px;
+}
+
+
 
 .galeria {
     display: grid;                                                      
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));       
-    gap: 30px;                                                          
+    gap: 40px;                                                          
     justify-items: center;                                              
-    padding: 20px;                                                      
+    padding: 20px;
+    margin-left: 550px;
+    margin-right: 550px;                                                      
 }
 
 
@@ -17,21 +70,26 @@ figure {
     margin: 0;                                                          
     padding: 10px;                                                      
     border-radius: 2px;                                                 
-    outline: 1.5px solid black;                                       
+    outline: 2px solid #3F292B;                                       
     outline-offset: 5px;                                                
     transition: transform 0.3s ease, outline-color 0.4s ease;           
 }
 
 figure:hover {
     transform: scale(1.05);                                             
-    outline-color: cornflowerblue;                                    
+    outline-color: #DB7F67;                                    
+}
+
+figure:hover figcaption {
+    transform: scale(1.05);  
+    color: #DB7F67;
 }
 
 figcaption {
     margin-top: 8px;                                                    
     font-size: 16px;                                                    
     font-weight: bold;                                                  
-    color: #333;                                                      
+    color: #3F292B;                                                    
 }
 
 
