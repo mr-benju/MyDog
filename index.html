@@ -5,6 +5,10 @@
         <meta charset="UTF-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <!-- Google Fonts para título bonito -->
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
         <!-- Google Fonts para descripción -->
@@ -59,7 +63,11 @@
                 <figcaption>Border Collie</figcaption>
             </figure>
 
-            <figure data-size="large">
+            <figure data-size="large" data-name="San Bernardo"
+                data-description="Es un perro de raza gigante, conocido por su tamaño musculoso, cuerpo fuerte y temperamento afable y leal. 
+                Posee un pelaje largo o corto, en tonos rojo y blanco o marrón, y su apariencia es imponente y noble. 
+                Es un perro muy afectuoso con niños y con una gran capacidad para el rescate en montaña, gracias a su agudo oído y olfato.">
+                
                 <img src="img/san_bernardo.png" alt="San Bernardo" width="200" height="200">
                 <figcaption>San Bernardo</figcaption>
             </figure>
@@ -166,5 +174,24 @@
 
     </body>
 
+    <div id="dogModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+      
+                <div class="modal-header">
+                    <h4 class="modal-title" id="dogModalLabel">Título del perro</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body d-flex" style="display: flex; gap: 15px; align-items: center;">
+                    <img id="dogImage" src="" alt="Imagen del perro" width="200">
+                    <p id="dogDescription">Aquí irá la descripción del perro...</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </html>

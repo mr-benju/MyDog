@@ -14,3 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
         applyFilter('all'); // estado inicial
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const figures = document.querySelectorAll(".galeria figure");
+
+    figures.forEach(fig => {
+        fig.addEventListener("click", () => {
+            const name = fig.getAttribute("data-name");
+            const description = fig.getAttribute("data-description");
+            const imgSrc = fig.querySelector("img").getAttribute("src");
+
+            // Insertar datos en el modal
+            document.getElementById("dogModalLabel").textContent = name;
+            document.getElementById("dogDescription").textContent = description;
+            document.getElementById("dogImage").setAttribute("src", imgSrc);
+
+            // Mostrar modal (Bootstrap)
+            $('#dogModal').modal('show');
+        });
+    });
+});

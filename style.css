@@ -5,7 +5,7 @@ body {
 
 
 /* ==========
-    TITULO
+    TITULO 
    ==========*/
 .titulo-fondo {
     background: linear-gradient(135deg, #D9B55F 0%, #D97C5F 100%);
@@ -45,6 +45,9 @@ body {
     100% { transform: translateX(100px) translateY(100px); }
 }
 
+/* ==========
+    DESCRIPCION
+   ==========*/
 .descripcion {
     text-align: center;
     margin-left: 350px;
@@ -63,8 +66,17 @@ body {
     font-family: 'Lora', serif; 
     line-height: 1.4;
 }
- 
 
+/* ==========
+    FILTRO
+   ==========*/
+.filters{
+    text-align: center; 
+}
+ 
+/* ==========
+    GALERIA DE IMAGENES
+   ==========*/
 
 .galeria {
     display: grid;                                                      
