@@ -81,15 +81,17 @@ figure {
     text-align: center;                                                 
     margin: 0;                                                          
     padding: 10px;                                                      
-    border-radius: 2px;                                                 
-    outline: 2px solid #3F292B;                                       
+    border-radius: 35px;                                                 
+    outline: 7px linear-gradient( 135deg, #D9B55F 20%, #D97C5F 100% ); ;                                       
     outline-offset: 5px;                                                
-    transition: transform 0.3s ease, outline-color 0.4s ease;           
+    transition: transform 0.3s ease, outline-color 0.4s ease;   
+    box-shadow: #4d27016e 0px 10px 20px -10px;        
 }
 
 figure:hover {
     transform: scale(1.05);                                             
-    outline-color: #DB7F67;                                    
+    outline-color: #DB7F67; 
+    box-shadow: #DB7F67 0px 12px 28px -10px;                                   
 }
 
 figure:hover figcaption {
