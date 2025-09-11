@@ -1,8 +1,106 @@
 body {
-    background-color: black!important;
+    background-color: rgba(255, 255, 255, 0.863)!important;
 
 }
 
+.galeria {
+    display: grid;                                                      
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));       
+    gap: 30px;                                                          
+    justify-items: center;                                              
+    padding: 20px;                                                      
+}
+
+
+figure {
+    text-align: center;                                                 
+    margin: 0;                                                          
+    padding: 10px;                                                      
+    border-radius: 2px;                                                 
+    outline: 1.5px solid black;                                       
+    outline-offset: 5px;                                                
+    transition: transform 0.3s ease, outline-color 0.4s ease;           
+}
+
+figure:hover {
+    transform: scale(1.05);                                             
+    outline-color: cornflowerblue;                                    
+}
+
+figcaption {
+    margin-top: 8px;                                                    
+    font-size: 16px;                                                    
+    font-weight: bold;                                                  
+    color: #333;                                                      
+}
+
+
+
+/* ==========
+   EFECTOS OPCIONALES
+   ========== 
+.hover-zoom {
+    transition: transform 0.3s ease, filter 0.4s ease;
+    border-radius: 2px;
+    outline: 1.5px solid black;
+    outline-offset: 5px;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+    outline-color: cornflowerblue;
+}
+
+*/
+
+
+
+
+
+/*
+.foto_perro {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente 
+    align-items: center;     /* Centra verticalmente 
+} */
+
+/*
+
+.galeria { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 30px; 
+    justify-items: center; 
+    padding: 20px; }
+
+
+figcaption { 
+    margin-top: 11px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #333; }
+
+
+figure { text-align: center; 
+margin: 0;           /* quita márgenes por defecto  
+padding: 10px; } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============
+    FORMULARIO 
+   =============*/
 .margen {
     margin-top: 90%;
     margin-left: 50px;
@@ -24,24 +122,4 @@ body {
 .password {
     margin-left: 30%;
     margin-right: 30%;
-}
-
-/* ==========
-   EFECTOS OPCIONALES
-   ========== */
-.hover-zoom {
-    transition: transform 0.3s ease, filter 0.4s ease;
-    border-radius: 10px; /* antes estaba vacío y causaba error */
-}
-
-.hover-zoom:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-.foto_perro {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
 }
