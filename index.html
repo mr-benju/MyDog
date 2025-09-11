@@ -10,6 +10,8 @@
         <!-- Google Fonts para descripción -->
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+         <!-- Script para el filtro de la galería -->
+        <script src="script.js" defer></script>
         <!-- el css siempre va al final porque el boostrap puede tener otras configuraciones que inhiban al css -->
         
     </head>
@@ -36,94 +38,103 @@
             <p class="descripcion-cta">¡Tu nuevo mejor amigo es único y ya te está esperando!</p> 
             </p>       
         </div>
+
+         <div class="filters" role="toolbar" aria-label="Filtrar por tamaño">
+            <label for="filter-select" class="visually-hidden">Filtrar por tamaño</label>
+            <select id="filter-select" class="filter-select" aria-label="Filtrar razas por tamaño">
+                <option value="all">Todas</option>
+                <option value="small">Pequeñas</option>
+                <option value="large">Grandes</option>
+            </select>
+        </div>
         
         <div class="galeria">
-            <figure>
+            <figure data-size="small">
                 <img src="img/beagle.png" alt="Beagle" width="200" height="200">
                 <figcaption>Beagle</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/border_collie.png" alt="Border Collie" width="200" height="200">
                 <figcaption>Border Collie</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/san_bernardo.png" alt="San Bernardo" width="200" height="200">
                 <figcaption>San Bernardo</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/weimaraner.png" alt="Weimaraner" width="200" height="200">
                 <figcaption>Weimaraner</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="small">
                 <img src="img/jack_rusell.png" alt="Jack Rusell" width="200" height="200">
                 <figcaption>Jack Rusell</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/boxer.png" alt="Boxer" width="200" height="200">
                 <figcaption>Boxer</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/chow_chow.png" alt="Chow Chow" width="200" height="200">
                 <figcaption>Chow Chow</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/american_pitbull_terrier.png" alt="American Pitbull Terrier" width="200" height="200">
                 <figcaption>American Pitbull Terrier</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/dalmata.png" alt="Dálmata" width="200" height="200">
                 <figcaption>Dálmata</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/doberman.png" alt="Doberman" width="200" height="200">
                 <figcaption>Doberman</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/dogo_argentino.png" alt="Dogo Argentino" width="200" height="200">
                 <figcaption>Dogo Argentino</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="small">
                 <img src="img/salchicha.png" alt="Salchicha" width="200" height="200">
                 <figcaption>Salchicha</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="small">
                 <img src="img/poodle.png" alt="Poodle" width="200" height="200">
                 <figcaption>Poodle</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="small">
                 <img src="img/shiba_inu.png" alt="Shiba Inu" width="200" height="200">
                 <figcaption>Shiba Inu</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/boyero_berna.png" alt="Boyero de Berna" width="200" height="200">
                 <figcaption>Boyero de Berna</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/cane_corso.png" alt="Cane Corso" width="200" height="200">
                 <figcaption>Cane Corso</figcaption>
             </figure>
 
-            <figure>
+            <figure data-size="large">
                 <img src="img/terra_nova.png" alt="Terra Nova" width="200" height="200">
                 <figcaption>Terra Nova</figcaption>
             </figure>
-            
-            <figure>
+
+            <figure data-size="large">
                 <img src="img/labrador.png" alt="Labrador" width="200" height="200">
                 <figcaption>Labrador</figcaption>
             </figure>
