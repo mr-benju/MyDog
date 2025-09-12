@@ -2,6 +2,11 @@
 <html>
 
     <head>
+    <!--
+        Proyecto: MyDog
+        Descripción: Galería interactiva y formulario para razas de perros.
+        Estructura y scripts adaptados para responsividad y accesibilidad.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Latest compiled and minified CSS -->
@@ -23,7 +28,8 @@
 
     <body>
 
-        <div class="titulo-fondo">
+    <!-- Título principal de la página -->
+    <div class="titulo-fondo">
             
              MY DOG 🐾
 
@@ -33,7 +39,8 @@
         </div>
 
 
-        <div class="descripcion">
+    <!-- Descripción introductoria -->
+    <div class="descripcion">
             <p>¿Estás considerando tener un perro, pero necesitas más información para tomar la mejor decisión tanto para la mascota como para tu familia? 
             ¡Pues tenemos grandes noticias! Nuestra Biblioteca de razas te ayudará a comprender las características de las distintas razas de perro y a decidir cuál podría ser tu mascota ideal. 
             Navega por la historia de todas las razas de perro y por los rasgos de cada personalidad más abajo. 
@@ -44,7 +51,8 @@
             </p>       
         </div>
 
-        <div class="filters" role="toolbar" aria-label="Filtrar por tamaño y buscar">
+    <!-- Filtros de tamaño y barra de búsqueda -->
+    <div class="filters" role="toolbar" aria-label="Filtrar por tamaño y buscar">
             <div style="display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap;">
                 <div>
                     <label for="filter-select" class="visually-hidden">Filtrar por tamaño</label>
@@ -63,7 +71,8 @@
             </div>
         </div>
         
-        <div class="galeria">
+    <!-- Galería de razas de perros, cada figure representa una raza -->
+    <div class="galeria">
             <figure data-size="small" data-name=" Beagle" data-description=" Es un perro de tamaño mediano, conocido por su carácter amigable, curioso y sociable. 
             Posee un pelaje corto y denso, generalmente en tonos tricolor (blanco, negro y marrón). ">
                 <img src="img/beagle.png" alt="Beagle" width="200" height="200">
@@ -198,7 +207,7 @@ El boyero de Berna será un perro adecuado para un propietario hogareño que ten
 
 
     
-        <!-- FORMULARIO PRINCIPAL -->
+    <!-- FORMULARIO PRINCIPAL: Registro y feedback del usuario -->
         <form class="margen">
             <h2 style="font-family: 'Fredoka One', cursive; color: #e87500; font-size: 2.2rem; margin-bottom: 18px; margin-top: 0; letter-spacing: 1px;">¡Queremos conocerte!<br><span style='font-size:1.2rem; font-family: Lora, serif; color:#b85c00; font-weight:400;'>Completa este formulario y sé parte de nuestra comunidad perruna 🐶✨</span></h2>
             <div class="email">
@@ -230,7 +239,8 @@ El boyero de Berna será un perro adecuado para un propietario hogareño que ten
 
 
 
-        <div id="dogModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel">
+    <!-- Modal Bootstrap para mostrar detalles de cada perro -->
+    <div id="dogModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
       

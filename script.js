@@ -1,9 +1,12 @@
+// =============================
 // Búsqueda de perro por nombre
+// Filtra la galería mostrando solo las razas que coinciden con el texto ingresado
+// =============================
 document.addEventListener('DOMContentLoaded', function() {
-    const searchForm = document.getElementById('search-form');
-    const searchInput = document.getElementById('search-input');
-    const galeria = document.querySelector('.galeria');
-    const figures = document.querySelectorAll('.galeria figure');
+    const searchForm = document.getElementById('search-form'); // Formulario de búsqueda
+    const searchInput = document.getElementById('search-input'); // Input de búsqueda
+    const galeria = document.querySelector('.galeria'); // Contenedor de la galería
+    const figures = document.querySelectorAll('.galeria figure'); // Todas las razas
     if (searchForm && searchInput && galeria) {
         searchForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -27,9 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// =============================
 // Mostrar mensaje al enviar el formulario
+// Al enviar el formulario, muestra un modal (o alerta) de confirmación de registro
+// =============================
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form.margen');
+    const form = document.querySelector('form.margen'); // Formulario principal
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -66,9 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// =============================
+// Filtro por tamaño (select desplegable)
+// Muestra solo las razas según el tamaño seleccionado
+// =============================
 document.addEventListener('DOMContentLoaded', () => {
-    const select = document.getElementById('filter-select');
-    const items = document.querySelectorAll('.galeria figure');
+    const select = document.getElementById('filter-select'); // Select de filtro por tamaño
+    const items = document.querySelectorAll('.galeria figure'); // Todas las razas
 
     function applyFilter(filter) {
         items.forEach(el => {
@@ -84,14 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// =============================
+// Mostrar modal con detalles del perro al hacer click en la imagen
+// =============================
 document.addEventListener("DOMContentLoaded", () => {
-    const figures = document.querySelectorAll(".galeria figure");
+    const figures = document.querySelectorAll(".galeria figure"); // Todas las razas
 
     figures.forEach(fig => {
         fig.addEventListener("click", () => {
-            const name = fig.getAttribute("data-name");
-            const description = fig.getAttribute("data-description");
-            const imgSrc = fig.querySelector("img").getAttribute("src");
+            const name = fig.getAttribute("data-name"); // Nombre de la raza
+            const description = fig.getAttribute("data-description"); // Descripción
+            const imgSrc = fig.querySelector("img").getAttribute("src"); // Imagen
 
             // Insertar datos en el modal
             document.getElementById("dogModalLabel").textContent = name;

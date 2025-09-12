@@ -1,3 +1,22 @@
+/*
+    Proyecto: MyDog
+    Descripción: Estilos para galería, filtros, formulario y modales de razas de perros.
+    Incluye media queries para responsividad en móviles, tablets y escritorio.
+*/
+/* --- Estilos generales y de layout --- */
+/* --- Título principal y subtítulo --- */
+/* --- Descripción introductoria --- */
+/* --- Galería de imágenes de perros --- */
+/* --- Filtros de tamaño y búsqueda --- */
+/* --- Formulario de registro y feedback --- */
+/* --- Media queries para responsividad --- */
+/*
+    <=1200px: Reduce márgenes y ajusta filtros/galería
+    <=900px:  Reduce columnas y fuentes
+    <=600px:  Ajusta layout, fuentes y paddings para móviles
+    <=480px:  Inputs y botones más pequeños, modales adaptados
+    <=400px:  Fuentes y paddings mínimos para pantallas muy pequeñas
+*/
 @media (max-width: 400px) {
     .titulo-fondo {
         font-size: 1.3rem;
