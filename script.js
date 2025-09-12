@@ -8,29 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
         searchForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const query = searchInput.value.trim().toLowerCase();
-            let found = false;
             figures.forEach(fig => {
                 const name = (fig.getAttribute('data-name') || '').trim().toLowerCase();
                 if (query && name.includes(query)) {
                     fig.style.display = '';
-                    found = true;
                 } else if (!query) {
                     fig.style.display = '';
                 } else {
                     fig.style.display = 'none';
                 }
             });
-            if (query && found) {
-                galeria.classList.add('centrada');
-            } else {
-                galeria.classList.remove('centrada');
-            }
         });
-        // Si el usuario borra el texto, mostrar todos y quitar centrado
+        // Si el usuario borra el texto, mostrar todos
         searchInput.addEventListener('input', function() {
             if (!searchInput.value.trim()) {
                 figures.forEach(fig => fig.style.display = '');
-                galeria.classList.remove('centrada');
             }
         });
     }
