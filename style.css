@@ -68,6 +68,52 @@ body {
 }
 
 
+.opc-filtro {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 18px; 
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-family: 'Fredoka One', cursive; 
+    color: #e87500; 
+    font-size: 2.2rem; 
+    margin-bottom: 18px; 
+    margin-top: 0; 
+    letter-spacing: 1px;
+}
+
+#search-form {
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    margin: 0;
+}
+
+
+#search-input {
+    border-radius: 20px; 
+    border: 1px solid #e87500; 
+    padding: 6px 12px; 
+    font-size: 15px; 
+    outline: none;
+    min-width: 120px;
+}
+
+#search-btn {
+    background: #e87500; 
+    border: none; 
+    border-radius: 50%; 
+    width: 34px; 
+    height: 34px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+}
+
 
  
 /* ==========
@@ -217,6 +263,13 @@ figcaption {
     transform: translateY(-2px);
 
 
+}
+
+.sp1 {
+    font-size:1.2rem; 
+    font-family: Lora, serif; 
+    color:#b85c00; 
+    font-weight:400;
 }
 
 /* ====================

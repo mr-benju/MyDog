@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const searchForm = document.getElementById('search-form'); // Formulario de búsqueda
+    const searchInput = document.getElementById('search-input'); // Input de búsqueda
+    const galeria = document.querySelector('.galeria'); // Contenedor de la galería
+    const figures = document.querySelectorAll('.galeria figure'); // Todas las razas
+    if (searchForm && searchInput && galeria) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchInput.value.trim().toLowerCase();
+            figures.forEach(fig => {
+                const name = (fig.getAttribute('data-name') || '').trim().toLowerCase();
+                if (query && name.includes(query)) {
+                    fig.style.display = '';
+                } else if (!query) {
+                    fig.style.display = '';
+                } else {
+                    fig.style.display = 'none';
+                }
+            });
+        });
+        // Si el usuario borra el texto, mostrar todos
+        searchInput.addEventListener('input', function() {
+            if (!searchInput.value.trim()) {
+                figures.forEach(fig => fig.style.display = '');
+            }
+        });
+    }
+});
+
 // Mostrar mensaje al enviar el formulario
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form.margen');
@@ -37,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const select = document.getElementById('filter-select');
     const items = document.querySelectorAll('.galeria figure');
@@ -44,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyFilter(filter) {
         items.forEach(el => {
             const size = el.dataset.size || 'large';
-            el.classList.toggle('hidden', !(filter === 'all' || size === filter));
+            el.classList.toggle('hidden', !(filter === 'all' || size === filter)); 
         });
     }
 
