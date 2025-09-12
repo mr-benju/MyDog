@@ -43,13 +43,23 @@
             </p>       
         </div>
 
-         <div class="filters" role="toolbar" aria-label="Filtrar por tamaño">
-            <label for="filter-select" class="visually-hidden">Filtrar por tamaño</label>
-            <select id="filter-select" class="filter-select" aria-label="Filtrar razas por tamaño">
-                <option value="all">Todas</option>
-                <option value="small">Pequeñas</option>
-                <option value="large">Grandes</option>
-            </select>
+        <div class="filters" role="toolbar" aria-label="Filtrar por tamaño y buscar">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap;">
+                <div>
+                    <label for="filter-select" class="visually-hidden">Filtrar por tamaño</label>
+                    <select id="filter-select" class="filter-select" aria-label="Filtrar razas por tamaño">
+                        <option value="all">Todas</option>
+                        <option value="small">Pequeñas</option>
+                        <option value="large">Grandes</option>
+                    </select>
+                </div>
+                <form id="search-form" style="display: flex; align-items: center; gap: 6px; margin: 0;">
+                    <input type="text" id="search-input" placeholder="Buscar raza..." aria-label="Buscar raza por nombre" style="border-radius: 20px; border: 1px solid #e87500; padding: 6px 12px; font-size: 15px; outline: none; min-width: 120px;">
+                    <button type="submit" id="search-btn" style="background: #e87500; border: none; border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M21.53 20.47l-4.73-4.73A7.92 7.92 0 0018 10a8 8 0 10-8 8 7.92 7.92 0 005.74-2.2l4.73 4.73a1 1 0 001.41-1.41zM4 10a6 6 0 1112 0 6 6 0 01-12 0z"></path></svg>
+                    </button>
+                </form>
+            </div>
         </div>
         
         <div class="galeria">
