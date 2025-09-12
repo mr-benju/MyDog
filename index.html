@@ -187,24 +187,39 @@ El boyero de Berna será un perro adecuado para un propietario hogareño que ten
 
 
     
+        <!-- FORMULARIO PRINCIPAL -->
         <form class="margen">
-        <div class="email">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email">
-        </div>
-        <div class="password">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-        </div>
-        <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-        </div>
-        <button type="submit" class="btn btn-orange">Submit</button>
+            <h2 style="font-family: 'Fredoka One', cursive; color: #e87500; font-size: 2.2rem; margin-bottom: 18px; margin-top: 0; letter-spacing: 1px;">¡Queremos conocerte!<br><span style='font-size:1.2rem; font-family: Lora, serif; color:#b85c00; font-weight:400;'>Completa este formulario y sé parte de nuestra comunidad perruna 🐶✨</span></h2>
+            <div class="email">
+                <label for="email2">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email2" name="email2">
+            </div>
+            <div class="password">
+                <label for="pwd2">Contraseña:</label>
+                <input type="password" class="form-control" id="pwd2" name="pwd2">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="info">Quiero recibir información de nuevas razas</label><br>
+                <label><input type="checkbox" name="ofertas">Quiero recibir ofertas y novedades</label><br>
+                <label><input type="checkbox" name="eventos">Quiero recibir información de eventos</label>
+            </div>
+            <div class="radio" style="margin: 15px 0; text-align: left;">
+                <label style="margin-right: 15px;">¿Cómo calificarías la página?</label><br>
+                <label><input type="radio" name="calificacion" value="excelente"> Excelente</label>
+                <label><input type="radio" name="calificacion" value="buena"> Buena</label>
+                <label><input type="radio" name="calificacion" value="regular"> Regular</label>
+                <label><input type="radio" name="calificacion" value="mala"> Mala</label>
+            </div>
+            <div class="comentario" style="margin-bottom: 15px;">
+                <label for="comentario">Comentarios u opiniones sobre la página:</label>
+                <textarea class="form-control" id="comentario" name="comentario" rows="3" placeholder="Escribe aquí tus comentarios..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-orange">Enviar</button>
         </form>
 
 
 
-         <div id="dogModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel">
+        <div id="dogModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
       
