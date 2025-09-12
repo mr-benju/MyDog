@@ -1,8 +1,6 @@
 body {
-    background-color: #FAF9F6!important;
-
+    background-color:#FAF9F6!important;
 }
-
 
 /* ==========
     TITULO 
@@ -66,55 +64,6 @@ body {
     font-family: 'Lora', serif; 
     line-height: 1.4;
 }
-
-
-.opc-filtro {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 18px; 
-    flex-wrap: wrap;
-}
-
-h2 {
-    font-family: 'Fredoka One', cursive; 
-    color: #e87500; 
-    font-size: 2.2rem; 
-    margin-bottom: 18px; 
-    margin-top: 0; 
-    letter-spacing: 1px;
-}
-
-#search-form {
-    display: flex; 
-    align-items: center; 
-    gap: 6px; 
-    margin: 0;
-}
-
-
-#search-input {
-    border-radius: 20px; 
-    border: 1px solid #e87500; 
-    padding: 6px 12px; 
-    font-size: 15px; 
-    outline: none;
-    min-width: 120px;
-}
-
-#search-btn {
-    background: #e87500; 
-    border: none; 
-    border-radius: 50%; 
-    width: 34px; 
-    height: 34px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    cursor: pointer;
-}
-
-
  
 /* ==========
     GALERIA DE IMAGENES
@@ -137,7 +86,7 @@ figure {
     padding: 10px;                                                      
     border-radius: 35px;                                                                                               
     transition: transform 0.3s ease, outline-color 0.4s ease;   
-    box-shadow: #4d27016e 0px 10px 20px -10px;        
+    box-shadow: #4d27016e 0px 10px 40px -10px;        
 }
 
 figure:hover {
@@ -175,7 +124,42 @@ figcaption {
 
 }
 
+.opc-filtro {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 18px; 
+    flex-wrap: wrap;
+}
 
+#search-form {
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    margin: 0;
+}
+
+
+#search-input {
+    border-radius: 20px; 
+    border: 1px solid #e87500; 
+    padding: 6px 12px; 
+    font-size: 15px; 
+    outline: none;
+    min-width: 120px;
+}
+
+#search-btn {
+    background: #e87500; 
+    border: none; 
+    border-radius: 50%; 
+    width: 34px; 
+    height: 34px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+}
 
 /* =============
     FORMULARIO 
@@ -265,6 +249,15 @@ figcaption {
 
 }
 
+h2 {
+    font-family: 'Fredoka One', cursive; 
+    color: #e87500; 
+    font-size: 2.2rem; 
+    margin-bottom: 18px; 
+    margin-top: 0; 
+    letter-spacing: 1px;
+}
+
 .sp1 {
     font-size:1.2rem; 
     font-family: Lora, serif; 
@@ -275,9 +268,6 @@ figcaption {
 /* ====================
     DISEÑO DE POPUP 
    ====================*/
-
- 
-
 #dogModal .modal-content{
     border-radius: 12px;
     overflow: hidden;
@@ -296,7 +286,7 @@ figcaption {
     
 }
 
- #dogModal .modal-title,
+#dogModal .modal-title,
 #dogModal #dogModalLabel {
     margin-top: 20px;
     text-align: center;
@@ -346,59 +336,6 @@ figcaption {
 
 
 
-
-
-
-
-/* ==========
-   EFECTOS OPCIONALES
-   ========== 
-.hover-zoom {
-    transition: transform 0.3s ease, filter 0.4s ease;
-    border-radius: 2px;
-    outline: 1.5px solid black;
-    outline-offset: 5px;
-}
-
-.hover-zoom:hover {
-    transform: scale(1.1);
-    outline-color: cornflowerblue;
-}
-
-*/
-
-
-
-
-
-/*
-.foto_perro {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente 
-    align-items: center;     /* Centra verticalmente 
-} */
-
-/*
-
-.galeria { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 30px; 
-    justify-items: center; 
-    padding: 20px; }
-
-
-figcaption { 
-    margin-top: 11px; 
-    font-size: 16px; 
-    font-weight: bold; 
-    color: #333; }
-
-
-figure { text-align: center; 
-margin: 0;           /* quita márgenes por defecto  
-padding: 10px; } */
 
 
 
