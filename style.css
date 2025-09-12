@@ -75,13 +75,25 @@ body {
    ==========*/
 
 .galeria {
-    display: grid;                                                      
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));       
-    gap: 40px;                                                          
-    justify-items: center;                                              
-    padding: 20px;
-    margin-left: 550px;
-    margin-right: 550px;                                                      
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 20px 0 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-height: 240px;
+    transition: justify-content 0.3s;
+}
+
+.galeria.centrada {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    overflow-x: visible;
 }
 
 
