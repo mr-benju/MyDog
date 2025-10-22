@@ -1,0 +1,22 @@
+/* Site-wide title styles adapted from original style.css */
+.titulo-fondo {
+	background: linear-gradient(135deg, #D9B55F 0%, #D97C5F 100%);
+	color: white;
+	text-align: center;
+	padding: 40px;
+	margin: 0 0 30px 0;
+	font-family: 'Fredoka One', cursive;
+	font-size: 3.2rem;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+	position: relative;
+}
+
+.subtitulo-fondo {
+	font-size: 1.25rem;
+	margin-top: 10px;
+	opacity: 0.95;
+	font-family: 'Lora', serif;
+}
+
+/* Make the app container more centered */
+.App { padding-bottom: 40px; }
