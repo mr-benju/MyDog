@@ -1,4 +1,4 @@
-/* Gallery and filter styles */
+
 .filters {
 	display: flex;
 	justify-content: center;
@@ -19,11 +19,39 @@
 
 .galeria {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	gap: 28px;
 	padding: 20px;
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
+	justify-items: center;
 }
 
-figure { text-align:center; }
+figure { 
+    text-align: center;
+    box-shadow: 0 8px 8px rgba(133, 77, 3, 0.815);
+    border-radius: 8px;
+    width: 280px;
+    height: 280px;
+    padding: 15px;
+    background: white;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+    border-radius: 4px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
