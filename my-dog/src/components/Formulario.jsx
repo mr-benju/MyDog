@@ -1,6 +1,7 @@
 /* formulario captura datos de usuario valida y muestra confirmacion */
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/formulario.css";
+import { validarCorreo } from "../utils/validarCorreo";
 
 export default function Formulario() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,12 @@ export default function Formulario() {
     e.preventDefault();
     // open modal instead of alert
     setModalOpen(true);
+        // ahora se usa la función que probamos en Jasmine
+    if (!validarCorreo(email)) {
+      setError("Correo electrónico inválido");
+      return;
+    }
+
   };
 
   function handleConfirm() {
