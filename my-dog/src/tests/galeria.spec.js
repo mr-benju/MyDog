@@ -1,24 +1,42 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { render, screen, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { act } from 'react';
 import Galeria from '../components/Galeria';
 
+afterEach(() => cleanup());
+
 describe('Componente Galeria', () => {
-  it('renderiza el nombre del perro correctamente', () => {
-    const container = document.createElement('div');
-    document.body.appendChild(container);
-    const perros = [{ nombre: 'San Bernardo'}];
+  it('Renderiza el nombre del perro correctamente', () => {
+    render(
+      <MemoryRouter>
+        <Galeria perros={[{ nombre: 'San Bernardo' }]} />
+      </MemoryRouter>
+    );
 
-    act(() => {
-      const root = createRoot(container);
-      root.render(
-        <MemoryRouter>
-          <Galeria perros={perros} />
-        </MemoryRouter>
-      );
+    expect(screen.getByText('San Bernardo')).toBeTruthy();
+  });
+
+  it('Renderiza todas las imágenes de los perros correctamente', () => {
+    const perros = [
+      { nombre: 'San Bernardo', imagen: '/img/san_bernardo.png' },
+      { nombre: 'Labrador', imagen: '/img/labrador.png' }
+    ];
+
+    render(
+      <MemoryRouter>
+        <Galeria perros={perros} />
+      </MemoryRouter>
+    );
+
+    const imagenes = screen.getAllByRole('img');
+    expect(imagenes.length).toBe(perros.length);
+
+    imagenes.forEach((img, index) => {
+      expect(img.src).toContain(perros[index].imagen);
+      expect(img.alt).toBe(perros[index].nombre);
+      expect(img.width).toBe(200);
+      expect(img.height).toBe(200);
     });
-
-    expect(container.textContent).toContain('San Bernardo');
   });
 });
+
