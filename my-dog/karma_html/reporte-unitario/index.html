@@ -94,7 +94,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </head>
 
 <body id="HTMLReporter" class="html-reporter">
-<h1>Tested in Chrome 142.0.0.0 (Windows 10) on Thu Oct 30 2025</h1>
+<h1>Tested in Chrome 137.0.0.0 (Windows 10) on Thu Oct 30 2025</h1>
 
 <div class="alert">
 
@@ -102,7 +102,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 
   
   <span class="passingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>5 specs, 0 failed, 0 pending</span>
+  <a href="#" onclick="unfold();">Unfold</a></span>9 specs, 0 failed, 0 pending</span>
   
 
 
@@ -118,11 +118,11 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">Componente Galeria</span>
     
       <div class="specSummary passed">
-      <span class="description">Renderiza el nombre del perro correctamente</span>
+      <span class="description">Renderiza todas las imágenes de los perros correctamente</span>
       </div>
     
       <div class="specSummary passed">
-      <span class="description">Renderiza todas las imágenes de los perros correctamente</span>
+      <span class="description">Renderiza el nombre del perro correctamente</span>
       </div>
     
     </div>
@@ -140,6 +140,27 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     
       <div class="specSummary passed">
       <span class="description">Debe rechazar un correo sin dominio</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite passed">
+      <span class="description">Función filtrarRazas</span>
+    
+      <div class="specSummary passed">
+      <span class="description">debe devolver todos los perros si el filtro es 'all' y la búsqueda está vacía</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">debe combinar filtro y búsqueda (por ejemplo 'small' + 'poodle')</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">debe buscar por raza 'Labrador'</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">debe filtrar por tamaño 'small'</span>
       </div>
     
     </div>
