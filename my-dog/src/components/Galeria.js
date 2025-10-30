@@ -1,4 +1,5 @@
 /* galeria muestra lista de perros en un grid abre modal o ruta al seleccionar */
+import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 export default function Galeria({ perros }) {
