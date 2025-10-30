@@ -1,3 +1,4 @@
+/* app gestiona el layout principal rutas y el estado de filtros y busqueda */
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";

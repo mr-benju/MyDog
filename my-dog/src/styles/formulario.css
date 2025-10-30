@@ -1,39 +1,158 @@
+/* estilos del formulario botones campos y modal de confirmacion */
 /* Formulario styles and confirmation modal */
 .margen {
   max-width: 780px;
   margin: 36px auto;
-  padding: 18px;
+  padding: 30px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(217, 124, 95, 0.1);
+  font-family: 'Quicksand', sans-serif;
 }
 
-.margen h2 { margin-top: 0; }
+.margen h2 { 
+  margin: 0 0 25px 0;
+  color: #D97C5F;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
 
-.email, .password, .comentario { margin-bottom: 12px; }
+.email, .password, .comentario { 
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.margen label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 1.1rem;
+}
 
 /* inputs and textarea consistent styling */
 .margen input[type="email"],
 .margen input[type="password"],
 .margen textarea {
   width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 12px 15px;
+  border: 2px solid #D9B55F;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.2s ease;
+  background-color: #fff;
 }
 
-.margen textarea { min-height: 92px; resize: vertical; }
+.margen input[type="email"]:hover,
+.margen input[type="password"]:hover,
+.margen textarea:hover {
+  border-color: #D97C5F;
+}
 
-.checkbox label, .radio label { display: block; margin-bottom: 6px; }
+.margen input[type="email"]:focus,
+.margen input[type="password"]:focus,
+.margen textarea:focus {
+  outline: none;
+  border-color: #D97C5F;
+  box-shadow: 0 0 0 3px rgba(217, 124, 95, 0.2);
+}
 
-.btn-orange { background: linear-gradient(90deg,#d97c5f,#d9b55f); color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; cursor: pointer; }
+.margen textarea { 
+  min-height: 120px; 
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.checkbox label, .radio label { 
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-orange { 
+  background: linear-gradient(135deg, #D9B55F 0%, #D97C5F 100%);
+  color: #fff;
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(217, 124, 95, 0.2);
+}
+
+.btn-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 124, 95, 0.3);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+/* Checkbox and radio custom styling */
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #D97C5F;
+}
 
 /* confirmation modal */
-.form-modal-fondo { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display:flex; align-items:center; justify-content:center; z-index:1200; opacity:0; pointer-events:none; transition:opacity 200ms ease; }
-.form-modal-fondo.open { opacity:1; pointer-events:auto; }
-.form-modal-caja { background:#fff; padding:18px; border-radius:8px; box-shadow:0 8px 30px rgba(0,0,0,0.2); width: 420px; max-width: calc(100% - 40px); transform: translateY(8px) scale(0.98); transition:transform 200ms ease, opacity 200ms ease; opacity:0; }
-.form-modal-fondo.open .form-modal-caja { transform: translateY(0) scale(1); opacity:1; }
-.form-modal-caja h3 { margin:0 0 8px; }
-.form-modal-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }
+.form-modal-fondo { 
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.form-modal-fondo.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-modal-caja {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  width: 420px;
+  max-width: calc(100% - 40px);
+  transform: translateY(8px) scale(0.98);
+  transition: transform 200ms ease, opacity 200ms ease;
+  opacity: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-modal-fondo.open .form-modal-caja {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.form-modal-caja h3 {
+  margin: 0 0 15px;
+  color: #D97C5F;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.form-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

@@ -1,20 +1,76 @@
 
+/* estilos de la galeria figuras imagenes filtros y layout grid */
 .filters {
-	display: flex;
-	justify-content: center;
-	margin: 14px 0 4px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .opc-filtro {
-	display: flex;
-	gap: 12px;
-	align-items: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(217, 124, 95, 0.15);
 }
 
 .filter-select {
-	padding: 8px 10px;
-	border-radius: 6px;
-	border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #D9B55F;
+    background: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.filter-select:hover {
+    border-color: #D97C5F;
+}
+
+.filter-select:focus {
+    border-color: #D97C5F;
+    box-shadow: 0 0 0 3px rgba(217, 124, 95, 0.2);
+}
+
+.opc-filtro input[type="text"] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #D9B55F;
+    background: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a;
+    min-width: 200px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.opc-filtro input[type="text"]:hover {
+    border-color: #D97C5F;
+}
+
+.opc-filtro input[type="text"]:focus {
+    border-color: #D97C5F;
+    box-shadow: 0 0 0 3px rgba(217, 124, 95, 0.2);
+}
+
+.opc-filtro input[type="text"]::placeholder {
+    color: #999;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilo para el texto "Buscar raza" */
+.opc-filtro label {
+    font-weight: 600;
+    color: #D97C5F;
+    font-size: 1.1rem;
 }
 
 .galeria {
@@ -34,17 +90,18 @@
 
 figure { 
     text-align: center;
-    box-shadow: 0 8px 8px rgba(133, 77, 3, 0.815);
+    box-shadow: 0 8px 8px rgba(241, 73, 6, 0.288);
     border-radius: 8px;
     width: 280px;
     height: 280px;
     padding: 15px;
-    background: white;
+    background: rgb(250, 250, 250);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 figure:hover {
@@ -54,9 +111,8 @@ figure:hover {
 
 figure img {
     border-radius: 4px;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    width: 230px;
+    height: 230px;
     object-fit: contain;
+    margin: 0 auto;
 }

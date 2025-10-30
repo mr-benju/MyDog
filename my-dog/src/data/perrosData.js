@@ -1,3 +1,4 @@
+/* datos de ejemplo de perros con nombre imagen tamano y descripcion */
 const perrosData = [
   {
     id: 1,

@@ -1,3 +1,4 @@
+/* componente descripcion muestra texto introductorio y llamada a la accion */
 import React from "react";
 
 function Descripcion() {

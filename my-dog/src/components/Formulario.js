@@ -1,3 +1,4 @@
+/* formulario captura datos de usuario valida y muestra confirmacion */
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/formulario.css";
 

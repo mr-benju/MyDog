@@ -1,3 +1,4 @@
+/* modal perro muestra informacion detallada de un perro imagen titulo descripcion y boton cerrar */
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import perrosData from "../data/perrosData";
@@ -56,9 +57,11 @@ export default function ModalPerro() {
         >
           ✖
         </button>
-        <h3>{perro.nombre}</h3>
-        <img src={perro.imagen} alt={perro.nombre} width="200" />
-        <p>{perro.descripcion}</p>
+        <img src={perro.imagen} alt={perro.nombre} />
+        <div className="modal-content">
+          <h3>{perro.nombre}</h3>
+          <p>{perro.descripcion}</p>
+        </div>
       </div>
     </div>
   );

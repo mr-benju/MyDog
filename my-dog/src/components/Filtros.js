@@ -1,3 +1,4 @@
+/* componente filtros controla filtro por tamaño y busca por nombre actualiza estado en el padre */
 import React from "react";
 
 function Filtros({ setFiltro, setBusqueda }) {

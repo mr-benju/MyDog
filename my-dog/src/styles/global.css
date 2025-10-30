@@ -1,9 +1,10 @@
-/* Reset default body margins and padding */
+/* estilos globales tipografia header descripcion y ajustes generales */
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    background-color: #faf1e9;  /* Un tono beige suave que combina con los colores naranja/dorado */
 }
 
 .titulo-fondo {
@@ -31,10 +32,32 @@ body {
 	letter-spacing: 0.5px;
 }
 
-/* Make the app container more centered */
 .App { 
     padding-bottom: 40px;
     margin: 0;
     width: 100%;
     overflow-x: hidden;
+}
+
+/* estilo descripcion */
+.descripcion {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    letter-spacing: 0.3px;
+}
+
+.descripcion p {
+    margin: 10px 0;
+}
+
+.descripcion-cta {
+    font-weight: 600;
+    color: #D97C5F;
+    margin-top: 15px !important;
 }

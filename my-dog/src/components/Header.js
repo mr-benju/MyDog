@@ -1,3 +1,4 @@
+/* header muestra el titulo principal y subtitulo decorativo */
 import React from "react";
 
 function Header() {
