@@ -1,9 +1,10 @@
 /* formulario captura datos de usuario valida y muestra confirmacion */
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/formulario.css";
-import { validarCorreo } from "../utils/validarCorreo";
+import { validarCorreo } from "../utils/validarCorreo"; // prueba unitaria
 
 export default function Formulario() {
+  const [error, setError] = useState(""); // para posibles mensajes de error
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkInfo, setCheckInfo] = useState(false);

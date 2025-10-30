@@ -4,6 +4,7 @@ describe("Validación de correo electrónico", function () {
   it("Debe aceptar un correo válido", function () {
     const resultado = validarCorreo("usuario@correo.com");
     expect(resultado).toBeTrue();
+    // Se establecen distintos escenarios con correos de prueba
   });
 
   it("Debe rechazar un correo sin @", function () {
@@ -16,3 +17,5 @@ describe("Validación de correo electrónico", function () {
     expect(resultado).toBeFalse();
   });
 });
+
+// se valida de que sea verdadero o falso dependiendo del formato del correo ingresado

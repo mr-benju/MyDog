@@ -1,5 +1,5 @@
 export default {
-  spec_dir: "src/tests",// En que ruta verificara los tests
+  spec_dir: "src/tests", // En que ruta verificara los tests
   spec_files: [
     "**/*[sS]pec.?(m)js"
   ],
