@@ -27,6 +27,11 @@
 	justify-items: center;
 }
 
+.galeria a {
+  text-decoration: none;
+  color: inherit;
+}
+
 figure { 
     text-align: center;
     box-shadow: 0 8px 8px rgba(133, 77, 3, 0.815);

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Descripcion from "./components/Descripcion";
 import Filtros from "./components/Filtros";
@@ -13,7 +14,8 @@ import "./styles/galeria.css";
 function App() {
   const [filtro, setFiltro] = useState("all");
   const [busqueda, setBusqueda] = useState("");
-  const [perroSeleccionado, setPerroSeleccionado] = useState(null);
+  const location = useLocation();
+  const state = location.state; //Para el fondo del modal
 
   const perrosFiltrados = perrosData.filter((perro) => {
     const cumpleFiltro = filtro === "all" || perro.tamano === filtro;
@@ -24,16 +26,26 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <>
       <Header />
       <Descripcion />
       <Filtros setFiltro={setFiltro} setBusqueda={setBusqueda} />
-      <Galeria perros={perrosFiltrados} setPerroSeleccionado={setPerroSeleccionado} />
-      {perroSeleccionado && (
-        <ModalPerro perro={perroSeleccionado} setPerroSeleccionado={setPerroSeleccionado} />
+
+      <Routes location={state?.backgroundLocation || location}>
+        <Route
+          path="/"
+          element={<Galeria perros={perrosFiltrados} />}
+        /> 
+      </Routes>
+    
+      {state?.backgroundLocation && (
+        <Routes>
+          <Route path="/perro/:id" element={<ModalPerro />} />
+        </Routes>
       )}
+
       <Formulario />
-    </div>
+    </>
   );
 }
 
