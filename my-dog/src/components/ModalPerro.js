@@ -3,31 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/modal.css";
 
-export default function ModalPerro() {
+export default function ModalPerro({ perros = []}) {
   const { id } = useParams(); // ID real del perro
   const navigate = useNavigate();
 
-  const [perro, setPerro] = useState(null);
+  const perroEncontrado = perros.find((p) => p.id == id)
+
   const [open, setOpen] = useState(false);
   const modalRef = useRef(null);
   const closeButtonRef = useRef(null);
-
-  const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:ZaBRNqOQ/perro";
-
-  useEffect(() => {
-    async function cargarPerro() {
-      try {
-        const response = await fetch(`${API_URL}/${id}`);
-        if (!response.ok) throw new Error("No se pudo obtener el perro");
-        
-        const data = await response.json();
-        setPerro(data);
-      } catch (error) {
-        console.error("Error cargando perro:", error);
-      }
-    }
-    cargarPerro();
-  }, [id]);
 
   useEffect(() => {
     const idTimeout = setTimeout(() => setOpen(true), 10);
@@ -41,10 +25,10 @@ export default function ModalPerro() {
 
   const handleClose = () => {
     setOpen(false);
-    setTimeout(() => navigate(-1), 240);
+    setTimeout(() => navigate(-1), 100);
   };
 
-  if (!perro) return null;
+  if (!perroEncontrado) return null;
 
   return (
     <div className={`modal-fondo ${open ? "open" : ""}`} onClick={handleClose}>
@@ -54,7 +38,7 @@ export default function ModalPerro() {
         ref={modalRef}
         role="dialog"
         aria-modal="true"
-        aria-label={perro.nombre}
+        aria-label={perroEncontrado.nombre}
       >
         <button 
           className="cerrar" 
@@ -65,11 +49,11 @@ export default function ModalPerro() {
           ✖
         </button>
         
-        <img src={perro.imagen} alt={perro.nombre} />
+        <img src={perroEncontrado.imagen} alt={perroEncontrado.nombre} />
 
         <div className="modal-content">
-          <h3>{perro.nombre}</h3>
-          <p>{perro.descripcion}</p>
+          <h3>{perroEncontrado.nombre}</h3>
+          <p>{perroEncontrado.descripcion}</p>
         </div>
       </div>
     </div>

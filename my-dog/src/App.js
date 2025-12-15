@@ -48,8 +48,7 @@ function App() {
   /* -------------------- CONFIGURACIÓN API -------------------- */
 
   // API_URL definida UNA sola vez (buena práctica)
-  const API_URL =
-    "https://x8ki-letl-twmt.n7.xano.io/api:ZaBRNqOQ/perro";
+  const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:ZaBRNqOQ/perro";
 
   /* -------------------- CARGA DE DATOS -------------------- */
 
@@ -58,8 +57,17 @@ function App() {
     async function cargarPerros() {
       try {
         const response = await fetch(API_URL);
+
+        if (!response.ok) {
+          if (response.status === 429) {
+            throw new Error("El servidor esta saturado, intenta más tarde");
+          }
+          throw new Error(`Error en la peticion: ${response.status}`);
+        }
+
         const data = await response.json();
         setPerros(data);
+
       } catch (error) {
         console.error("Error cargando perros:", error);
       } finally {
@@ -126,7 +134,7 @@ function App() {
 
           {state?.backgroundLocation && (
             <Routes>
-              <Route path="/perro/:id" element={<ModalPerro />} />
+              <Route path="/perro/:id" element={<ModalPerro perros={perros}/>} />
             </Routes>
           )}
 
