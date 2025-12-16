@@ -1,7 +1,7 @@
 /*
   AdminLista:
   - Muestra la lista de perros obtenidos desde Xano
-  - Permite eliminar un perro (DELETE)
+  - Permite eliminar un perro 
   - No carga datos por sí mismo (los recibe desde App.js)
   - Usa la API_URL que viene por props
 */
@@ -49,7 +49,7 @@ function AdminLista({ perros, setPerros, apiUrl, onEditar }) {
                     <img
                       src={perro.imagen}
                       alt={perro.nombre}
-                      style={{ width: '70px', height: '70px', objectFit: 'contain', borderRadius: '10px', border: '1px solid #ffe0b2', background: '#fff', display: 'block' }}
+                      className="admin-lista-img"
                     />
                   )}
                   <div style={{ flex: 1 }}>

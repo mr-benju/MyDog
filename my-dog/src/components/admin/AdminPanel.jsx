@@ -18,6 +18,12 @@ function AdminPanel({
   // Estado separado para el perro en edición
   const [perroEditar, setPerroEditar] = useState(null);
 
+  // Al editar la pagina sube hacia el formulario
+  const handleEditar = (perro) => {
+    setPerroEditar(perro);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div className="admin-panel">
 
@@ -48,9 +54,8 @@ function AdminPanel({
         perros={perros}
         setPerros={setPerros}
         apiUrl={apiUrl}
-        onEditar={setPerroEditar}
+        onEditar={handleEditar}
       />
-
     </div>
   );
 }

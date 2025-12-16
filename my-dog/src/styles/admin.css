@@ -79,6 +79,18 @@
   background: #fffdfa;
   transition: border 0.2s;
 }
+.admin-formulario .admin-input {
+  border: 1.5px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  background: #fffdfa;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 .admin-formulario input:focus,
 .admin-formulario textarea:focus {
   border: 1.5px solid var(--admin-primary);
@@ -210,4 +222,14 @@
   text-align: center;
   margin-top: 0.5rem;
   font-weight: bold;
+}
+
+.admin-lista-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain; 
+  border-radius: 10px;
+  border: 1px solid #ffe0b2;
+  background-color: #fff;
+  display: block;
 }

@@ -3,14 +3,12 @@
   - Permite crear y editar perros (POST / PUT)
   - Reutiliza el mismo formulario para ambas acciones
   - Detecta si un perro está en modo edición
-  - Usa la API_URL recibida por props (Xano)
+  - Usa la API_URL recibida por props 
 */
 
 import React, { useState, useEffect } from "react";
 
-function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEditar }) {
-
-  // Estado inicial del formulario
+// Estado inicial del formulario
   const estadoInicial = {
     id: null,
     nombre: "",
@@ -19,9 +17,10 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
     imagen: "",
   };
 
+function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEditar }) {
+
   const [form, setForm] = useState(estadoInicial);
   
-
   /*
     Detecta si hay un perro marcado para edición
     (flag 'editar' seteada desde AdminLista)
@@ -42,8 +41,6 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
     });
   };
 
-  
-
   // Limpia el formulario
   const resetFormulario = () => {
     setForm(estadoInicial);
@@ -54,12 +51,11 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Enviar SOLO los campos que Xano espera (sin id, sin editar)
     const payload = {
-      nombre: form.nombre,
-      tamano: form.tamano,
+      nombre:      form.nombre,
+      tamano:      form.tamano,
       descripcion: form.descripcion,
-      imagen: form.imagen,
+      imagen:      form.imagen,
     };
 
     try {
@@ -72,7 +68,7 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
         });
 
         if (!response.ok) {
-          const errText = await response.text(); // ✅ ver error real
+          const errText = await response.text(); 
           console.error("PUT error:", response.status, errText);
           throw new Error("Error al actualizar");
         }
@@ -91,7 +87,7 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
         });
 
         if (!response.ok) {
-          const errText = await response.text(); // ✅ ver error real
+          const errText = await response.text(); 
           console.error("POST error:", response.status, errText);
           throw new Error("Error al crear");
         }
@@ -126,14 +122,18 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
           required
         />
 
-        <input
-          type="text"
+        <select
           name="tamano"
-          placeholder="Tamaño"
-          value={form.tamano}
+          value={form.tamano} // Aquí vendrá 'small' o 'large' desde la DB
           onChange={handleChange}
           required
-        />
+          className="admin-input"
+        >
+          <option value=""> Selecciona tamaño </option>
+      
+          <option value="small">Pequeño</option>
+          <option value="large">Grande</option>
+        </select>
 
         <textarea
           name="descripcion"
@@ -152,8 +152,16 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
           required
         />
 
-
-        {/* correo y contraseña eliminados (no se usan para crear perros) */}
+        {form.imagen && (
+          <div style={{ marginTop: "10px", textAlign: "center" }}>
+            <img
+              src={form.imagen}
+              alt="Vista Previa"
+              style={{ maxHeight: '150px', borderRadius: '8px', border: '1px solid #ccc' }}
+              onError={(e) => e.target.style.display = 'none'} // Si el link esta roto se oculta
+              />
+          </div>
+        )}
 
         <button type="submit">
           {form.id ? "Actualizar" : "Crear"}
@@ -167,9 +175,7 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
             Cancelar edición
           </button>
         )}
-
       </form>
-
     </div>
   );
 }
