@@ -38,21 +38,38 @@ function App() {
   // Estados de control
   const [loading, setLoading] = useState(true);
 
-  // NUEVO: control del modo administrador
+  // Control del modo administrador
   const [modoAdmin, setModoAdmin] = useState(false);
   const [adminAutorizado, setAdminAutorizado] = useState(false);
 
   const location = useLocation();
   const state = location.state; // fondo del modal
 
-  /* -------------------- CONFIGURACIÓN API -------------------- */
 
-  // API_URL definida UNA sola vez (buena práctica)
+  /* ----------- DETECTA ATAJO DE TECLADO PARA ADMIN ---------*/
+  useEffect(() => {
+    const detectarAtajo = (e) => {
+      // Ctrl + Shift + H
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "h") {
+        e.preventDefault();
+        setModoAdmin(true);
+      }
+    };
+
+    // Se agrega lo que permite detectar el atajo 
+    window.addEventListener("keydown", detectarAtajo);
+
+    // Limpieza si el comoponente se desmonta
+    return () => window.removeEventListener("keydown", detectarAtajo);
+  }, []);
+
+  /* -------------------------- API -------------------------- */
+
   const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:ZaBRNqOQ/perro";
 
   /* -------------------- CARGA DE DATOS -------------------- */
 
-  // Obtener perros desde la API (una sola vez)
+  // Obtener perros desde la API 
   useEffect(() => {
     async function cargarPerros() {
       try {
@@ -93,8 +110,7 @@ function App() {
 
   return (
     <>
-      {/* Header con botón para activar modo administrador */}
-      <Header onAdmin={() => setModoAdmin(true)} />
+      <Header />
 
       {/* ---------------- MODO ADMINISTRADOR ---------------- */}
       {modoAdmin ? (
