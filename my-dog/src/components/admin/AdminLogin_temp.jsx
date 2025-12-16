@@ -1,8 +1,8 @@
 /*
   AdminLogin:
   - Formulario de acceso al Modo Administrador (simulado)
-  - Usa una contraseña fija para fines académicos
-  - NO utiliza tokens ni autenticación real
+  - Usa una contraseña fija para fines del trabajo
+  - No utiliza tokens ni autenticación real
   - Solo controla acceso mediante estado en React
 */
 
@@ -20,7 +20,7 @@ function AdminLogin({ onSuccess, onCancel }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validación simple (modo desarrollador simulado)
+    // Validación simple 
     if (password === "1234") {
       setError("");
       onSuccess(); // Notifica a App que el acceso fue autorizado
@@ -44,6 +44,7 @@ function AdminLogin({ onSuccess, onCancel }) {
           placeholder="Ingrese contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoFocus
         />
 
         <button type="submit">
