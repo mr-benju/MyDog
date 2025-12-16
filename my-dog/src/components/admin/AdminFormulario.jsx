@@ -17,13 +17,10 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
     tamano: "",
     descripcion: "",
     imagen: "",
-    correo: "",
-    contrasena: "",
   };
 
   const [form, setForm] = useState(estadoInicial);
-  const [showPassword, setShowPassword] = useState(false);
-  const [errores, setErrores] = useState({});
+  
 
   /*
     Detecta si hay un perro marcado para edición
@@ -45,18 +42,7 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
     });
   };
 
-  // Validación de correo y contraseña
-  const validar = () => {
-    const nuevosErrores = {};
-    if (!form.correo || !/^\S+@\S+\.\S+$/.test(form.correo)) {
-      nuevosErrores.correo = "Correo electrónico inválido";
-    }
-    if (!form.contrasena || form.contrasena.length < 8) {
-      nuevosErrores.contrasena = "La contraseña debe tener al menos 8 caracteres";
-    }
-    setErrores(nuevosErrores);
-    return Object.keys(nuevosErrores).length === 0;
-  };
+  
 
   // Limpia el formulario
   const resetFormulario = () => {
@@ -67,7 +53,6 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validar()) return;
 
     // ✅ Enviar SOLO los campos que Xano espera (sin id, sin editar)
     const payload = {
@@ -168,50 +153,7 @@ function AdminFormulario({ perros, setPerros, apiUrl, perroEditar, setPerroEdita
         />
 
 
-        <input
-          type="email"
-          name="correo"
-          placeholder="Correo electrónico"
-          value={form.correo}
-          onChange={handleChange}
-          required
-          style={{ borderColor: errores.correo ? '#ff6f61' : undefined }}
-        />
-        {errores.correo && <span style={{ color: '#ff6f61', fontSize: '0.95em' }}>{errores.correo}</span>}
-
-        <div style={{ position: 'relative' }}>
-          <input
-            type={showPassword ? 'text' : 'password'}
-            name="contrasena"
-            placeholder="Contraseña (mínimo 8 caracteres)"
-            value={form.contrasena}
-            onChange={handleChange}
-            required
-            minLength={8}
-            style={{ borderColor: errores.contrasena ? '#ff6f61' : undefined, paddingRight: '2.5rem' }}
-          />
-          <button
-            type="button"
-            onClick={() => setShowPassword((v) => !v)}
-            style={{
-              position: 'absolute',
-              right: '0.5rem',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: '#ff914d',
-              fontSize: '1.1em',
-              padding: 0
-            }}
-            tabIndex={-1}
-            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
-          >
-            {showPassword ? '🙈' : '👁️'}
-          </button>
-        </div>
-        {errores.contrasena && <span style={{ color: '#ff6f61', fontSize: '0.95em' }}>{errores.contrasena}</span>}
+        {/* correo y contraseña eliminados (no se usan para crear perros) */}
 
         <button type="submit">
           {form.id ? "Actualizar" : "Crear"}
