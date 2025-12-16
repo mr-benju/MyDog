@@ -8,7 +8,7 @@
 
 import React from "react";
 
-function AdminLista({ perros, setPerros, apiUrl }) {
+function AdminLista({ perros, setPerros, apiUrl, onEditar }) {
 
   // Elimina un perro por ID
   const eliminarPerro = async (id) => {
@@ -36,55 +36,43 @@ function AdminLista({ perros, setPerros, apiUrl }) {
   };
 
   return (
-    <div className="admin-lista">
-
-      <h3>Lista de perros</h3>
-
-      {perros.length === 0 ? (
-        <p>No hay perros registrados.</p>
-      ) : (
-        <ul>
-          {perros.map((perro) => (
-            <li key={perro.id}>
-
-              <strong>{perro.nombre}</strong>
-              {" "}– tamaño: {perro.tamano}
-
-              <div className="acciones-admin">
-
-                {/* 
-                  Botón Editar:
-                  - No edita aquí directamente
-                  - Solo prepara el perro para el formulario
-                  (lo conectaremos en AdminFormulario)
-                */}
-                <button
-                  onClick={() => setPerros((prev) =>
-                    prev.map(p =>
-                      p.id === perro.id
-                        ? { ...p, editar: true }
-                        : p
-                    )
+      <div className="admin-lista">
+        <h3>Lista de perros</h3>
+        {perros.length === 0 ? (
+          <p>No hay perros registrados.</p>
+        ) : (
+          <ul>
+            {perros.map((perro) => (
+              <li key={perro.id}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+                  {perro.imagen && (
+                    <img
+                      src={perro.imagen}
+                      alt={perro.nombre}
+                      style={{ width: '70px', height: '70px', objectFit: 'contain', borderRadius: '10px', border: '1px solid #ffe0b2', background: '#fff', display: 'block' }}
+                    />
                   )}
-                >
-                  Editar
-                </button>
-
-                {/* Botón Eliminar */}
-                <button
-                  onClick={() => eliminarPerro(perro.id)}
-                >
-                  Eliminar
-                </button>
-
-              </div>
-
-            </li>
-          ))}
-        </ul>
-      )}
-
-    </div>
+                  <div style={{ flex: 1 }}>
+                    <strong>{perro.nombre}</strong> – tamaño: {perro.tamano}
+                  </div>
+                </div>
+                <div className="acciones-admin">
+                  <button
+                    onClick={() => onEditar(perro)}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    onClick={() => eliminarPerro(perro.id)}
+                  >
+                    Eliminar
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
   );
 }
 

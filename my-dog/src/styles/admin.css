@@ -1,0 +1,213 @@
+/*
+  Estilos para la sección de administración (admin)
+  Paleta: degradado naranja-amarillo, fondo claro, fuente principal igual que la página
+*/
+
+:root {
+  --admin-primary: #ff914d;
+  --admin-secondary: #f9d976;
+  --admin-bg: #fff7f0;
+  --admin-accent: #ff6f61;
+  --admin-border: #ffe0b2;
+  --admin-shadow: 0 2px 12px 0 rgba(255,145,77,0.10);
+  --admin-radius: 16px;
+  --admin-font: 'Quicksand', 'Montserrat', Arial, sans-serif;
+}
+
+.admin-panel {
+  background: var(--admin-bg);
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow);
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  font-family: var(--admin-font);
+}
+.admin-panel h2 {
+  color: var(--admin-primary);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.admin-panel p {
+  color: #b36a2e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.admin-panel button {
+  background: linear-gradient(90deg, var(--admin-primary), var(--admin-secondary));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  margin: 0.5rem 0.5rem 1rem 0;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 #ff914d33;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-panel button:hover {
+  background: linear-gradient(90deg, var(--admin-accent), var(--admin-secondary));
+  box-shadow: 0 2px 8px 0 #ff914d44;
+}
+
+.admin-formulario {
+  background: #fff;
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow);
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 2rem;
+}
+.admin-formulario h3 {
+  color: var(--admin-accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.admin-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.admin-formulario input,
+.admin-formulario textarea {
+  border: 1.5px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  background: #fffdfa;
+  transition: border 0.2s;
+}
+.admin-formulario input:focus,
+.admin-formulario textarea:focus {
+  border: 1.5px solid var(--admin-primary);
+  outline: none;
+}
+.admin-formulario button {
+  background: linear-gradient(90deg, var(--admin-primary), var(--admin-secondary));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  margin-right: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 #ff914d33;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-formulario button:hover {
+  background: linear-gradient(90deg, var(--admin-accent), var(--admin-secondary));
+  box-shadow: 0 2px 8px 0 #ff914d44;
+}
+
+.admin-lista {
+  background: #fff;
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow);
+  padding: 1.5rem 1.2rem;
+}
+.admin-lista h3 {
+  color: var(--admin-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.admin-lista ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.admin-lista li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: #fffdfa;
+  border: 1px solid var(--admin-border);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 4px 0 #ff914d11;
+}
+.admin-lista .acciones-admin {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+.admin-lista button {
+  background: linear-gradient(90deg, var(--admin-primary), var(--admin-secondary));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  font-family: var(--admin-font);
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 #ff914d22;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-lista button:hover {
+  background: linear-gradient(90deg, var(--admin-accent), var(--admin-secondary));
+  box-shadow: 0 2px 8px 0 #ff914d33;
+}
+
+.admin-login {
+  background: #fff;
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow);
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: 2.5rem auto;
+  font-family: var(--admin-font);
+}
+.admin-login h2 {
+  color: var(--admin-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.admin-login p {
+  color: #b36a2e;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.admin-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.admin-login input {
+  border: 1.5px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  background: #fffdfa;
+  transition: border 0.2s;
+}
+.admin-login input:focus {
+  border: 1.5px solid var(--admin-primary);
+  outline: none;
+}
+.admin-login button {
+  background: linear-gradient(90deg, var(--admin-primary), var(--admin-secondary));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: var(--admin-font);
+  margin-right: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 #ff914d33;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.admin-login button:hover {
+  background: linear-gradient(90deg, var(--admin-accent), var(--admin-secondary));
+  box-shadow: 0 2px 8px 0 #ff914d44;
+}
+.admin-login .error {
+  color: var(--admin-accent);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}

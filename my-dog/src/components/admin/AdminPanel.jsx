@@ -15,7 +15,7 @@ function AdminPanel({
   apiUrl,
   onSalir,
 }) {
-  // 🟢 Estado separado para el perro en edición
+  // Estado separado para el perro en edición
   const [perroEditar, setPerroEditar] = useState(null);
 
   return (
