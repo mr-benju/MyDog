@@ -1,5 +1,5 @@
 /* estilos del formulario botones campos y modal de confirmacion */
-/* Formulario styles and confirmation modal */
+
 .margen {
   max-width: 780px;
   margin: 36px auto;
@@ -22,7 +22,7 @@
   margin-bottom: 20px;
 }
 
-/* Label styling */
+
 .margen label {
   display: block;
   margin-bottom: 8px;
@@ -31,7 +31,6 @@
   font-size: 1.1rem;
 }
 
-/* inputs and textarea consistent styling */
 .margen input[type="email"],
 .margen input[type="password"],
 .margen textarea {
@@ -97,7 +96,6 @@
   transform: translateY(0);
 }
 
-/* Checkbox and radio custom styling */
 input[type="checkbox"], input[type="radio"] {
   margin-right: 10px;
   cursor: pointer;
@@ -106,7 +104,6 @@ input[type="checkbox"], input[type="radio"] {
   accent-color: #D97C5F;
 }
 
-/* confirmation modal */
 .form-modal-fondo { 
   position: fixed;
   inset: 0;
